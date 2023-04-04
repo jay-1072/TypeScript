@@ -1,0 +1,76 @@
+let myArr = [];
+myArr.push(42);
+myArr.push("Jay");
+myArr.push(true);
+// console.log(myArr);
+// console.log(typeof myArr);
+myArr.push(false);
+
+let tup:[string, number, boolean] = ['Jay', 21, true];
+
+let arr:(string|number|boolean)[] = ['AJay', 22, false];
+
+// tup[0] = 5;
+// arr[0] = 5;
+
+// arr = tup;
+// tup = arr;
+
+// let empTuple = ["Vivek Singh", 22, "Honesty"];
+// empTuple[0] = 23;
+
+// Operation on tuples
+tup.push(232);
+arr.push('Vijay');
+// console.log(tup);
+// console.log(arr);
+
+// let i:any;
+// for(i in tup) {
+//     console.log(tup[i]);
+// }
+
+let empTuple = ["Rohit Sharma", 25, "JavaTpoint"];  
+let [emp, student] = empTuple;  
+// console.log(emp);  
+// console.log(student);  
+  
+
+function myFun(tup:[string, number, boolean]):void {
+    let i:any;
+    for(i in tup) {
+        console.log(tup[i]);
+    }
+}
+
+myFun(tup);
+
+const myObj = {
+    prop1:'Jay',
+    prop2:42,
+}
+
+// myObj.prop1 = 40;
+
+type Guitarlist = {
+    name:string,
+    active:boolean,
+    albums:(string|number)[];
+}
+
+let evh:Guitarlist = {
+    name: 'Jay',
+    active: true,
+    albums: ['Hi', 123, 'Hello'] 
+}
+
+let jp:Guitarlist = {
+    name: 'Jimmy',
+    active: true,
+    albums: ['I', 'II' , 'III'] 
+}
+
+evh = jp;
+
+console.log(evh);
+console.log(jp);
